@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.nav {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 0.2px #888888;
+  width: 100vw;
+}
+
+/* Left starts */
+.nav .left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 30%;
+}
+.nav .left div {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .left div:nth-child(1) svg {
+  height: 24px;
+  width: 24px;
+  margin: 8px;
+  margin-left: 28px;
+}
+.nav .left div:nth-child(2) svg {
+  height: 20px;
+  width: 90px;
+  margin: 18px 14px;
+}
+.nav .left div:nth-child(2) p {
+  content: "IN";
+  color: #606060;
+  position: relative;
+  left: -11px;
+  top: -9px;
+  font-size: 12px;
+}
+
+/* Middle starts */
+.nav .middle {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+.nav .middle div {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.nav .middle > div:nth-child(1) {
+  border: 1px solid #888888;
+  border-radius: 3px;
+}
+.nav .middle div:nth-child(1) div:nth-child(1) input {
+  height: 32px;
+  outline: none;
+  border: none;
+  border-right: none;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  border-right: 1px solid #888888;
+  text-decoration: none;
+  width: 400px;
+}
+.nav .middle div:nth-child(1) div:nth-child(2) {
+  background: #f0f0f0;
+  padding: 6px 15px;
+}
+.nav .middle div:nth-child(1) div:nth-child(2) svg {
+  height: 20px;
+  width: 20px;
+  color: black;
+  fill: currentColor;
+}
+.nav .middle div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 20px;
+}
+.nav .middle div:nth-child(2) svg {
+  height: 32px;
+  width: 32px;
+  fill: currentColor;
+  color: #606060;
+}
+
+/* Right starts */
+.nav .right {
+  width: 30%;
+  margin-right: 70px;
+}
+.nav .right {
+  width: 30%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: right;
+  align-items: center;
+}
+.nav .right div:nth-child(1) {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.nav .right div:nth-child(1) div {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 12px;
+}
+.nav .right div:nth-child(1) div svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+  color: #606060;
+}
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#container div {
+  margin: 10px;
+  border: none;
+}
+#container div iframe {
+  border: none;
+}
