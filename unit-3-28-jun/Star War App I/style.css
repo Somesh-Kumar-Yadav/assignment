@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: url("https://images3.alphacoders.com/114/thumb-1920-11439.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cont {
+  margin-top: 30px;
+  width: 400px;
+
+  border: 1px solid white;
+  border-radius: 5px;
+  max-height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+input {
+  width: 400px;
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  position: fixed;
+
+  z-index: 1000;
+}
+.starwars {
+  margin: 5px;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+.starwars:nth-child(1) {
+  margin-top: 35px;
+}
