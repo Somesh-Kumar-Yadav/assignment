@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MY FOOD APP</title>
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<section>
+			<header>
+				<a href="#"><p class="logo">MY FOOD APP</p></a>
+				<ul>
+					<li><a href="search.html">Search</a></li>
+					<li><a href="receipe.html">Today's Receipe</a></li>
+					<li><a href="latest.html">Latest Receipe</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</header>
+			<div class="content">
+				<div class="textBx">
+					<h2>Search your <span>receipe</span> here.</h2>
+					<div>
+						<input placeholder="Search Here" id="name" onkeydown="get(event)" />
+
+						<h3>Suggestions will appear here</h3>
+						<div id="debounce"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="container"></div>
+	</body>
+</html>
+<script src="search.js"></script>
