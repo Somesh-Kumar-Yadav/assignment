@@ -10,11 +10,15 @@
 	<body>
 		<section>
 			<header></header>
+			<div id="container"></div>
 		</section>
 	</body>
 </html>
 <script type="module">
 	import navbar from "./components/navbar.js";
 	let head = document.querySelector("header");
+	let parent = document.getElementById("container");
 	head.innerHTML = navbar();
+	import { show, append } from "./scripts/scripts.js";
+	show(parent, "https://www.themealdb.com/api/json/v1/1/random.php");
 </script>
