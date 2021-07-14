@@ -1,10 +1,10 @@
 import "./App.css";
 import React from "react";
-import { Useref } from "./components/Input Form useref/Useref";
+import { BlogPost } from "./components/Blog-Form/BlogPost";
 function App() {
 	return (
 		<div className="App">
-			<Useref />
+			<BlogPost />
 		</div>
 	);
 }

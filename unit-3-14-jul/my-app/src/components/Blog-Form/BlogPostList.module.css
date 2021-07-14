@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.blog {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+	height: 200px;
+}
+.blog > h1,
+.blog > p {
+	padding: 2px;
+}
+.blog > h1 {
+	margin-top: 10px;
+}
+.title {
+	font-size: 24px;
+	text-transform: capitalize;
+}
+.author {
+	text-transform: capitalize;
+	position: absolute;
+	bottom: 30px;
+	right: 10px;
+}
+.private {
+	text-transform: capitalize;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+}
+.category {
+	text-transform: capitalize;
+	position: absolute;
+	bottom: 30px;
+	left: 10px;
+}
+.files {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	text-transform: inherit;
+}
