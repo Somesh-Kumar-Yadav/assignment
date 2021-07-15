@@ -2,7 +2,7 @@ import React from 'react'
 
 const StopWatch = ({hoursMinSecs}) => {
    
-    const { hours=0, minutes=0, seconds=0,milliseconds=0 } = hoursMinSecs;
+    const { hours, minutes, seconds,milliseconds } = hoursMinSecs;
     const [[hrs, mins, secs,millisecs], setTime] = React.useState([hours, minutes, seconds,milliseconds]);
     const [start, setStart] = React.useState(false);
     

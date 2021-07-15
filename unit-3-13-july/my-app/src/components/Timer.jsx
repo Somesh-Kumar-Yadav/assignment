@@ -2,7 +2,7 @@ import React from 'react'
 
 const Timer = ({hoursMinSecs}) => {
    
-    const { hours = 0, minutes = 0, seconds = 60 } = hoursMinSecs;
+    const { hours, minutes, seconds } = hoursMinSecs;
     const [[hrs, mins, secs], setTime] = React.useState([hours, minutes, seconds]);
     const [start, setStart] = React.useState(false);
     

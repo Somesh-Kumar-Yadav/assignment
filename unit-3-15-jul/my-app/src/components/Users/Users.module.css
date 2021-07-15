@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.users {
+	width: 500px;
+	border: 1px solid black;
+	margin: 10px auto;
+	padding: 5px;
+}
+
+.input {
+	margin: auto;
+	width: 400px;
+}
+.input input {
+	margin: 10px;
+}

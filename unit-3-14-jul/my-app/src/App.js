@@ -1,10 +1,10 @@
 import "./App.css";
 import React from "react";
-import { BlogPost } from "./components/Blog-Form/BlogPost";
+import { UserForm } from "./components/User-Form/UserForm";
 function App() {
 	return (
 		<div className="App">
-			<BlogPost />
+			<UserForm />
 		</div>
 	);
 }
