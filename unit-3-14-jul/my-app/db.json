@@ -19,26 +19,6 @@
       "ismarried": true,
       "files": "C:\\fakepath\\zoom_0.mp4",
       "id": 4
-    },
-    {
-      "name": "Somesh Yadav",
-      "age": "23",
-      "address": "Vill-Teliyadeeh post- rasulpur, Rasulpur tareta",
-      "department": "Technical",
-      "salary": "7888",
-      "ismarried": true,
-      "files": "C:\\fakepath\\zoom_0.mp4",
-      "id": 7
-    },
-    {
-      "name": "Somesh Kumar Yadav",
-      "age": "23",
-      "address": "Vill-Teliyadeeh post- rasulpur, Rasulpur tareta",
-      "department": "Marketing",
-      "salary": "1",
-      "ismarried": true,
-      "files": "C:\\fakepath\\playback.m3u",
-      "id": 8
     }
   ]
 }
