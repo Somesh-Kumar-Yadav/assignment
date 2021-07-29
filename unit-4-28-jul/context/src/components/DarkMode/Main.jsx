@@ -1,5 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import { Card } from "./Card"
+import { LeftMenu } from "./LeftMenu"
+import { Navbar } from "./Navbar"
 
 const Container = styled.div`
 position: absolute;
@@ -11,5 +14,8 @@ background: #F5F6FA;
 `
 export function Main() {
     return <Container>
+        <LeftMenu />
+        <Navbar />
+        <Card/>
     </Container>
 }

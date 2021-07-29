@@ -1,24 +1,28 @@
 import React from "react"
 import styled from "styled-components"
 const Section = styled.section`
+height:100vh;
+width:7vw;
+border:1px solid red;
 position: absolute;
-left: -0.35%;
-right: 93.68%;
-top: 0%;
-bottom: 0%;
+top:0;
+left:0;
+display:flex;
 `
-const User = styled.section`
-position: absolute;
-left: 1.46%;
-right: 95.76%;
-top: 3.32%;
-bottom: 92.77%;
-`
-
 export function LeftMenu() {
     return <Section>
-        <User>
-
-        </User>
+        <div>
+            <div><img src="https://pbs.twimg.com/profile_images/1378999055154511879/XmphRvoz_400x400.jpg" alt=""></img></div>
+        </div>
+        <div>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
+        <div>
+            <div></div>
+        </div>
     </Section>
 }

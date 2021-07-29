@@ -1,10 +1,10 @@
 import "./App.css";
-import { Main } from "./components/DarkMode/Main";
+import { Routes1 } from "./Routes/Routes_1";
 
 function App() {
 	return (
 		<div className="App">
-			<Main />
+			<Routes1 />
 		</div>
 	);
 }
