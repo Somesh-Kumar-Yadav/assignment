@@ -10,9 +10,6 @@ align-items: center;
 height: 3em;
 font-family: Brush Script MT, Brush Script Std, cursive;
 width: 100vw;
-position: absolute;
-bottom: 0;
-left: 0;
 list-style:none;
 &>div{
     display: flex;

@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const Section = styled.section`
 display: flex;
-margin-top: 40px;
+margin-top: 20px;
 justify-content: center;
 align-items: center;
 &>div>img{

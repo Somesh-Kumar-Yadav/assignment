@@ -1,7 +1,8 @@
 import React from "react"
 import { Route, Switch } from "react-router-dom"
 import { About } from "../Components/About/About"
-import { Clothes } from "../Components/Clothes.jsx/Clothes"
+import { Clothes } from "../Components/Clothes/Clothes"
+import { Details } from "../Components/Clothes/Details"
 import { Contact } from "../Components/Contact/Contact"
 import { Faq } from "../Components/FAQ/Faq"
 import { Home } from "../Components/HomePage/Home"
@@ -12,7 +13,7 @@ export function Routes() {
             <Route exact path="/">
                 <Home/>
             </Route>
-            <Route path="/clothes">
+            <Route  exact path="/clothes">
                 <Clothes/>
             </Route>
             <Route path="/about-us">
@@ -23,6 +24,9 @@ export function Routes() {
             </Route>
             <Route path="/faq">
                 <Faq/>
+            </Route>
+            <Route path="/clothes/:id">
+                <Details/>
             </Route>
             <Route>
                 <h1>Page under-construction</h1>

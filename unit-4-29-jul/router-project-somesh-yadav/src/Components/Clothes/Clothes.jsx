@@ -1,10 +1,13 @@
 import React from "react"
 import { Footer } from "../Footer/Footer"
 import { NavBar } from "../NavBar/NavBar"
-export function Contact() {
+import { ClothesCategory } from "./ClothesCategory"
+import { Products } from "./Products"
+export function Clothes() {
     return <>
         <NavBar/>
-        <h1>Contact Us Page</h1>
+        <ClothesCategory />
+        <Products/>
         <Footer/>
     </>
 }

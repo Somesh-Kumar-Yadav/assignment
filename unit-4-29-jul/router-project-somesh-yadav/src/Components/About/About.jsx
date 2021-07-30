@@ -1,6 +1,6 @@
 import React from "react"
 import { Footer } from "../Footer/Footer"
-import { NavBar } from "../NavBar.jsx/NavBar"
+import { NavBar } from "../NavBar/NavBar"
 export function About() {
     return <>
         <NavBar/>
