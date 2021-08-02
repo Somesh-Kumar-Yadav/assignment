@@ -1,11 +1,11 @@
 import "./App.css";
 import React from "react";
-import { CustomCalculator } from "./Components/CustomCalculator/CustomCalculator";
+import { SimpleCalculator } from "./Components/SimpleCalculator/SimpleCalculator";
 
 function App() {
 	return (
 		<div className="App">
-			<CustomCalculator />
+			<SimpleCalculator />
 		</div>
 	);
 }
