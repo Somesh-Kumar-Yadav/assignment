@@ -1,11 +1,11 @@
 import "./App.css";
 import React from "react";
-import { SimpleCalculator } from "./Components/SimpleCalculator/SimpleCalculator";
+import { Todos } from "./Components/ReduxTodos/Todos";
 
 function App() {
 	return (
 		<div className="App">
-			<SimpleCalculator />
+			<Todos />
 		</div>
 	);
 }
