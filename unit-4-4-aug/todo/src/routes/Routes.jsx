@@ -6,8 +6,10 @@ import { Login } from "../components/Login"
 
 export function Routes() {
     return <>
+        <div style={{display:"flex",justifyContent:"center"}}>
         <Link to="/" style={{marginRight:"10px"}}>Home</Link>
         <Link to="/login">Login</Link>
+        </div>
         <Switch>
             <Route exact path="/"><Todos/></Route>
             <Route path="/login"><Login/></Route>
