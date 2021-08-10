@@ -1,0 +1,39 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Learn hooks",
+      "status": true
+    },
+    {
+      "title": "Learn React",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "Learn redux",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "Learn Html",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "Learn CsS",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "Learn MONGODB",
+      "status": false,
+      "id": 6
+    },
+    {
+      "title": "Learn BAckend",
+      "status": false,
+      "id": 7
+    }
+  ]
+}
