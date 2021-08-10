@@ -1,7 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux";
 import styled from "styled-components"
-import { addTodos } from "../redux/app/actions";
+import { addTodosRequest, addTodosSuccess } from "../redux/app/actions";
 import {v4 as uuid} from "uuid"
 
 const InputBox = styled.div`
@@ -30,12 +30,13 @@ export function TodosInput() {
     const dispatch = useDispatch();
     const [todos, setTodos] = React.useState("");
     const handleTodos = () => {
+        dispatch(addTodosRequest())
         const payload = {
             id: uuid(),
             title: todos,
             status:false
         }
-        dispatch(addTodos(payload))
+        dispatch(addTodosSuccess(payload))
         setTodos("");
     }
     return <>

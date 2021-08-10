@@ -1,0 +1,54 @@
+{
+  "todos": [
+    {
+      "title": "Learn React",
+      "date": "8-aug",
+      "task": [
+        {
+          "task": "Router",
+          "status": true,
+          "id": "7d84f9a7-2126-4c7a-bca1-5c8718737b41"
+        },
+        {
+          "task": "Styled-components",
+          "status": true,
+          "id": "013bf9ee-acb5-4039-891a-3897ca122959"
+        },
+        {
+          "task": "Redux",
+          "status": true,
+          "id": "9e69621f-c2b8-491a-a9da-f89bebba15dc"
+        },
+        {
+          "task": "Api",
+          "status": false,
+          "id": "3621c2c3-2e9b-420c-9b2f-35371a902d72"
+        }
+      ],
+      "description": "React is a JAvaScript Library.",
+      "type": "OTHERS",
+      "progress": "INPROGRESS",
+      "id": 1
+    },
+    {
+      "title": "lknlk",
+      "date": "sgss",
+      "task": [
+        {
+          "task": "fdvfd",
+          "status": false,
+          "id": "d45394fc-bbb0-4fb3-9c7f-9a578761d20c"
+        },
+        {
+          "task": "ggg",
+          "status": false,
+          "id": "893a48e4-9d51-42e5-8c53-8c1788d59289"
+        }
+      ],
+      "description": "dsaadfv",
+      "type": "PERSONAL",
+      "progress": "INPROGRESS",
+      "id": 2
+    }
+  ]
+}

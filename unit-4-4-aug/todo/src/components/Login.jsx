@@ -1,9 +1,8 @@
-import axios from "axios"
 import React from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { shallowEqual, useDispatch, useSelector } from "react-redux"
 import { Redirect } from "react-router-dom"
 import styled from "styled-components"
-import { loginFailure, loginSuccess } from "../redux/auth/actions"
+import {  loginUser } from "../redux/auth/actions"
 
 const Section = styled.div`
 display: flex;
@@ -30,23 +29,18 @@ export function Login() {
     const [username,setUsername]=React.useState("")
     const [password, setPassword] = React.useState("")
     const dispatch = useDispatch();
-    const isAuth = useSelector(state => state.auth.isAuth);
+    const { isAuth,isError,isLoading } = useSelector(state => state.auth,shallowEqual);
 
     const handleLogin = () => {
-        axios.post("https://reqres.in/api/login", {
-            email: username,
-            password:password
-        }).then((res) => {
-            console.log(res.data.token)
-            dispatch(loginSuccess(res.data.token));
-        }).catch((err) => {
-            dispatch(loginFailure(err));
-        })
+        dispatch(loginUser({username,password}))
         setPassword("");
         setUsername("");
     }
     if (isAuth) {
         return <Redirect to="/" />
+    }
+    if (isLoading) {
+        return <div>...Loading</div>
     }
     return <Section>
         <h1>LOGIN PAGE</h1>
@@ -57,5 +51,6 @@ export function Login() {
         setPassword(e.target.value)
         }} />
         <button onClick={handleLogin}>LOGIN</button>
+        {isError&&<div style={{color:"red"}}>Something went wrong</div>}
     </Section>
 }
