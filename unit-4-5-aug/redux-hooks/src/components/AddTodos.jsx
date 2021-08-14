@@ -42,8 +42,8 @@ export function AddTodos() {
     const [date,setDate]=React.useState("")
     const [subTask,setSubTask]=React.useState("")
     const [subTaskList, setSubTaskList] = React.useState([]);
-    const [type,setType]=React.useState("TODO")
-    const [progress, setProgress] = React.useState("OFFICIAL")
+    const [type,setType]=React.useState("OFFICIAL")
+    const [progress, setProgress] = React.useState("TODO")
     const initPayload = {
         title: "",
         date: "",
@@ -70,7 +70,7 @@ export function AddTodos() {
     const dispatch = useDispatch();
     const handleAdd = () => {
         const payload = {
-         title: title,
+        title: title,
         date: date,
         task: subTaskList,
         description: description,
@@ -135,6 +135,7 @@ export function AddTodos() {
             <div>
                 <select value={progress} onChange={(e) => {
                     setProgress(e.target.value)
+               console.log(e.target.value)
                 }}>
                     <option>TODO</option>
                     <option>INPROGRESS</option>
@@ -144,6 +145,7 @@ export function AddTodos() {
             <div>
                 <select value={type} onChange={(e) => {
                     setType(e.target.value)
+                    console.log(e.target.value)
                 }}>
                     <option>OFFICIAL</option>
                     <option>PERSONAL</option>

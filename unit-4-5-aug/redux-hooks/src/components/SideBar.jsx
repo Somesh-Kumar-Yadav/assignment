@@ -2,6 +2,7 @@ import React from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
+import { userLogout } from "../redux/auth/actions";
 import { getTodo } from "../redux/todo/actions";
 const Side = styled.div`
 height:100vh;
@@ -41,6 +42,7 @@ top: 0;
     align-items: center;
     height: 15%;
     width: 100%;
+    cursor: pointer;
 }
 `
 const Lin =styled.span`
@@ -60,8 +62,10 @@ export function SideBar() {
         dispatch(getTodo());
     }, [dispatch])
     const data = useSelector((state) => state.todo.list)
-    const user = useSelector((state) => state.auth)
-    console.log(user);
+    const logout = () => {
+        dispatch(userLogout());
+    }
+    
     const all = data.length;
     const personal =  data.filter((e) => {
         return e.type ==="PERSONAL"
@@ -78,7 +82,7 @@ export function SideBar() {
     return <React.Fragment>
         
         <Side>
-            <div><p>User details<br/> fetch from<br/> api mock</p></div>
+            <div><p>Username : Somesh Kumar Yadav</p></div>
             <div>
                 <Lin>All { all}</Lin>
                 <Lin>Personal { per}</Lin>
@@ -87,7 +91,7 @@ export function SideBar() {
             </div>
             <div><Tab2/></div>
             <div>
-                <p>Logout</p>
+                <p onClick={logout}>Logout</p>
             </div>
         </Side>
     </React.Fragment>

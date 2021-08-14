@@ -67,3 +67,6 @@ export const registerUser = (payload) => (dispatch) => {
 			}
 		});
 };
+export const userLogout = (payload) => (dispatch) => {
+	dispatch(loginFailure());
+};
