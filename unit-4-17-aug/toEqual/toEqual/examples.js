@@ -4,28 +4,6 @@ function test(description, callback) {
 }
 
 function expect(received) {
-	function toBe(expected) {
-		if (received === expected) {
-			console.log("test has passeed");
-			return true;
-		} else {
-			console.log("test has failed !");
-			console.log(`received ${received} expected ${expected}`);
-			return false;
-		}
-	}
-
-	function toBeLessThanEqual(expected) {
-		if (received === expected) {
-			console.log("test has passeed");
-			return true;
-		} else {
-			console.log("test has failed !");
-			console.log(`received ${received} expected ${expected}`);
-			return false;
-		}
-	}
-
 	function __toEqual(exp, rec) {
 		let flag = true;
 		let expectedLength = Object.keys(exp).length;
@@ -41,9 +19,10 @@ function expect(received) {
 				flag = __toEqual(exp[key], rec[key]);
 				if (!flag) {
 					break;
-				} else if (exp[key] !== rec[key]) {
-					return false;
 				}
+			}
+			if (exp[key] !== rec[key]) {
+				return false;
 			}
 		}
 		return flag;
@@ -57,7 +36,7 @@ function expect(received) {
 			console.log("Test is failed");
 		}
 	}
-	return { toBe, toBeLessThanEqual, toEqual };
+	return { toEqual };
 }
 
 test("Check object", function () {
@@ -67,4 +46,6 @@ test("Check object", function () {
 	expect([1, 2, 3]).toEqual([1, 2, 3]);
 	expect({ a: 1, b: { c: 1, d: 2 } }).toEqual({ a: 1, b: { c: 1, d: 2 } });
 	expect([1, 2, [1, 2]]).toEqual([1, 2, [1, 2]]);
+	expect({ a: 1, b: { c: 1, d: 2 } }).toEqual({ a: 1, b: { e: 1, d: 2 } });
+	expect([1, 2, [1, 3]]).toEqual([1, 2, [1, 2]]);
 });
