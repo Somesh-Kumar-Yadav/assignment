@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button testing Should matchthe snapshot 1`] = `
+<div
+  className="container"
+  data-testid="btn"
+  onClick={[Function]}
+>
+  Button
+</div>
+`;
