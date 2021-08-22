@@ -6,6 +6,33 @@ import TaskList from "./TaskList";
 export default function TodoApp() {
 	const [todos, setTodos] = useState([]);
 	const [error, setError] = useState(false);
+	const handleToggle = (id) => {
+		let status = false;
+		const payload = todos.map((item) => {
+			if (item.id === id) {
+				status = item.status;
+				item.status = !item.status;
+			}
+			return item;
+		});
+		setTodos([...payload]);
+		fetch(`/tasks/${id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ status: status }),
+		})
+			.then((res) => {
+				if (res.status >= 200 && res.status <= 299) {
+					return res.json();
+				} else {
+					throw Error(res.statusText);
+				}
+			})
+			.then((res) => setTodos([...todos]))
+			.catch((err) => setError(true));
+	};
 	const handleSubmit = (title) => {
 		const payload = {
 			id: todos.length + 1,
@@ -46,7 +73,7 @@ export default function TodoApp() {
 					<TaskForm handleSubmit={handleSubmit} />
 				</header>
 				<section className="mt-2">
-					<TaskList todos={todos} />
+					<TaskList todos={todos} handleToggle={handleToggle} />
 				</section>
 			</div>
 		</Router>

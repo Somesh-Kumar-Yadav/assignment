@@ -1,36 +1,12 @@
 describe("sample test", () => {
 	const text = "LEARN CYPRESS VI";
-	const arr = [
-		{
-			id: 1,
-			status: false,
-			title: "LEARN CYPRESS I",
-		},
-		{
-			id: 2,
-			status: false,
-			title: "LEARN CYPRESS II",
-		},
-		{
-			id: 3,
-			status: false,
-			title: "LEARN CYPRESS III",
-		},
-		{
-			id: 4,
-			status: false,
-			title: "LEARN CYPRESS IV",
-		},
-		{
-			id: 5,
-			status: false,
-			title: "LEARN CYPRESS V",
-		},
-	];
+
 	beforeEach(() => {
-		cy.intercept("GET", "/tasks", {
-			statusCode: 200,
-			body: arr,
+		cy.intercept("GET", "/tasks", (req) => {
+			req.reply({
+				statusCode: 200,
+				fixture: "tasks.json",
+			});
 		});
 		cy.visit("/");
 	});
@@ -49,11 +25,11 @@ describe("sample test", () => {
 			body: {
 				title: text,
 				status: false,
-				id: 3,
+				id: 6,
 			},
 		});
 		cy.get(".task-input").type(text).type("{enter}").should("have.value", "");
-		cy.get(".task-list li").should("have.length", 6).contains(text);
+		cy.get(".task-list li").should("have.length", 6);
 	});
 	it("error handle", () => {
 		cy.intercept("POST", "/tasks", {
@@ -61,10 +37,24 @@ describe("sample test", () => {
 			body: {
 				title: text,
 				status: false,
-				id: 4,
+				id: 6,
 			},
 		});
 		cy.get(".task-input").type(text).type("{enter}").should("have.value", "");
 		cy.get(".error").contains("Something Went Wrong");
+	});
+	it("toggle a todo", () => {
+		cy.get(".task-list li").find("input");
+		cy.intercept("PATCH", "/tasks/1", {
+			statusCode: 201,
+			body: {
+				status: true,
+			},
+		});
+		cy.get(".task-list li").first().as("first-todo");
+		cy.get(".task-list li").last().as("last-todo");
+		cy.get("@first-todo").find("input").click().should("be.checked");
+		cy.get("@first-todo").should("have.class", "success");
+		cy.get("@last-todo").should("have.class", "failure");
 	});
 });

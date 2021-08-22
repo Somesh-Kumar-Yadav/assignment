@@ -1,8 +1,14 @@
 import React from "react";
+import "../App.css";
 
 const TaskItem = (props) => (
-	<li>
+	<li className={props.status ? "success" : "failure"}>
 		<div>
+			<input
+				type="checkbox"
+				checked={props.status}
+				onChange={props.handleToggle}
+			/>
 			<label>{props.label} </label>
 		</div>
 	</li>
@@ -11,7 +17,15 @@ const TaskItem = (props) => (
 const TaskList = (props) => (
 	<ul className="task-list">
 		{props.todos.map((todo) => (
-			<TaskItem key={todo.id} label={todo.title} />
+			<TaskItem
+				key={todo.id}
+				id={todo.id}
+				status={todo.status}
+				label={todo.title}
+				handleToggle={() => {
+					props.handleToggle(todo.id);
+				}}
+			/>
 		))}
 	</ul>
 );
