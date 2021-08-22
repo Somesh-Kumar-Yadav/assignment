@@ -57,4 +57,12 @@ describe("sample test", () => {
 		cy.get("@first-todo").should("have.class", "success");
 		cy.get("@last-todo").should("have.class", "failure");
 	});
+	it("deleting a todo", () => {
+		cy.get(".task-list li").find("button").contains("Delete");
+		cy.get(".task-list li").should("have.length", 5);
+		cy.intercept("DELETE", "/tasks/5");
+		cy.get(".task-list li").last().as("last-todo");
+		cy.get("@last-todo").find("button").click();
+		cy.get(".task-list li").should("have.length", 4);
+	});
 });

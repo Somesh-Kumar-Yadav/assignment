@@ -10,6 +10,7 @@ const TaskItem = (props) => (
 				onChange={props.handleToggle}
 			/>
 			<label>{props.label} </label>
+			<button onClick={props.handleDelete}>Delete</button>
 		</div>
 	</li>
 );
@@ -24,6 +25,9 @@ const TaskList = (props) => (
 				label={todo.title}
 				handleToggle={() => {
 					props.handleToggle(todo.id);
+				}}
+				handleDelete={() => {
+					props.handleDelete(todo.id);
 				}}
 			/>
 		))}

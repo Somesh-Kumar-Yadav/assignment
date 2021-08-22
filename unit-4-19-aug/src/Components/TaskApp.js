@@ -6,6 +6,13 @@ import TaskList from "./TaskList";
 export default function TodoApp() {
 	const [todos, setTodos] = useState([]);
 	const [error, setError] = useState(false);
+	const handleDelete = (id) => {
+		const payload = todos.filter((item) => item.id !== id);
+		setTodos([...payload]);
+		fetch(`/tasks/${id}`, {
+			method: "DELETE",
+		});
+	};
 	const handleToggle = (id) => {
 		let status = false;
 		const payload = todos.map((item) => {
@@ -73,7 +80,11 @@ export default function TodoApp() {
 					<TaskForm handleSubmit={handleSubmit} />
 				</header>
 				<section className="mt-2">
-					<TaskList todos={todos} handleToggle={handleToggle} />
+					<TaskList
+						handleDelete={handleDelete}
+						todos={todos}
+						handleToggle={handleToggle}
+					/>
 				</section>
 			</div>
 		</Router>
