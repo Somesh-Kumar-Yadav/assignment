@@ -1,0 +1,1239 @@
+Microsoft Windows [Version 10.0.10586]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Users\Angel>mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("6df10b9e-c516-4c1d-a19a-dc13e48dbc9d") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-09-08T10:50:42.758+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin       0.000GB
+assignment  0.000GB
+config      0.000GB
+local       0.000GB
+users       0.000GB
+> use assignment
+switched to db assignment
+> db.movies.find().pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b550"),
+        "id" : 1,
+        "movie_name" : "Alice's Adventures in Wonderland",
+        "movie_genre" : "Adventure|Children|Fantasy|Musical",
+        "production_year" : 2020,
+        "budget" : 18534
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b551"),
+        "id" : 2,
+        "movie_name" : "Delta of Venus",
+        "movie_genre" : "Drama",
+        "production_year" : 2015,
+        "budget" : 11685
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b552"),
+        "id" : 3,
+        "movie_name" : "Lost Weekend, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 19427
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b553"),
+        "id" : 4,
+        "movie_name" : "These Three",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 15014
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b554"),
+        "id" : 5,
+        "movie_name" : "Ladrón que roba a ladrón",
+        "movie_genre" : "Action|Adventure|Comedy|Crime",
+        "production_year" : 2006,
+        "budget" : 16332
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b555"),
+        "id" : 6,
+        "movie_name" : "In A Day",
+        "movie_genre" : "Romance",
+        "production_year" : 2016,
+        "budget" : 10112
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b556"),
+        "id" : 7,
+        "movie_name" : "Collision: Christopher Hitchens vs. Douglas Wilson",
+        "movie_genre" : "Documentary",
+        "production_year" : 1996,
+        "budget" : 14967
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b557"),
+        "id" : 8,
+        "movie_name" : "Deathstalker",
+        "movie_genre" : "Action|Adventure|Fantasy",
+        "production_year" : 1995,
+        "budget" : 10292
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b558"),
+        "id" : 9,
+        "movie_name" : "The Broken Jug",
+        "movie_genre" : "Comedy",
+        "production_year" : 1995,
+        "budget" : 10530
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b559"),
+        "id" : 10,
+        "movie_name" : "Pigs with a P.38",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2011,
+        "budget" : 17906
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55a"),
+        "id" : 11,
+        "movie_name" : "Apartment Zero",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1998,
+        "budget" : 16378
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55b"),
+        "id" : 12,
+        "movie_name" : "Asylum",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 1994,
+        "budget" : 19521
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55c"),
+        "id" : 13,
+        "movie_name" : "Philadelphia Story, The",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 15767
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55d"),
+        "id" : 14,
+        "movie_name" : "Abandoned, The",
+        "movie_genre" : "Horror|Mystery|Thriller",
+        "production_year" : 1993,
+        "budget" : 16061
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55e"),
+        "id" : 15,
+        "movie_name" : "Open Water 2: Adrift",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1999,
+        "budget" : 14862
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55f"),
+        "id" : 16,
+        "movie_name" : "Don Quixote",
+        "movie_genre" : "Adventure|Comedy|Drama",
+        "production_year" : 2014,
+        "budget" : 15915
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b560"),
+        "id" : 17,
+        "movie_name" : "My Flesh My Blood (Moja krew)",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 19860
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b561"),
+        "id" : 18,
+        "movie_name" : "Magic Christmas Tree, The",
+        "movie_genre" : "Children|Comedy|Fantasy",
+        "production_year" : 1993,
+        "budget" : 12865
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b562"),
+        "id" : 19,
+        "movie_name" : "Savages, The",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2000,
+        "budget" : 14647
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b563"),
+        "id" : 20,
+        "movie_name" : "Bee Movie",
+        "movie_genre" : "Animation|Comedy",
+        "production_year" : 2016,
+        "budget" : 15778
+}
+Type "it" for more
+> db.movies.find().pretty().limit(5)
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b550"),
+        "id" : 1,
+        "movie_name" : "Alice's Adventures in Wonderland",
+        "movie_genre" : "Adventure|Children|Fantasy|Musical",
+        "production_year" : 2020,
+        "budget" : 18534
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b551"),
+        "id" : 2,
+        "movie_name" : "Delta of Venus",
+        "movie_genre" : "Drama",
+        "production_year" : 2015,
+        "budget" : 11685
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b552"),
+        "id" : 3,
+        "movie_name" : "Lost Weekend, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 19427
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b553"),
+        "id" : 4,
+        "movie_name" : "These Three",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 15014
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b554"),
+        "id" : 5,
+        "movie_name" : "Ladrón que roba a ladrón",
+        "movie_genre" : "Action|Adventure|Comedy|Crime",
+        "production_year" : 2006,
+        "budget" : 16332
+}
+> db.movies.find({"movie_name:"Don Quixote"},{"movie_name":1}).pretty().limit(5)
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:29
+> db.movies.find({"movie_name:"Don Quixote"},{"movie_name":1}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:29
+> db.movies.find({"movie_name:"Don Quixote"})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:29
+> db.movies.find({"movie_name":{$eq:"Don Quixote"}})
+{ "_id" : ObjectId("61388a95b3c63ea3fe26b55f"), "id" : 16, "movie_name" : "Don Quixote", "movie_genre" : "Adventure|Comedy|Drama", "production_year" : 2014, "budget" : 15915 }
+> db.movies.find({"movie_name":{$eq:"Don Quixote"}}).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55f"),
+        "id" : 16,
+        "movie_name" : "Don Quixote",
+        "movie_genre" : "Adventure|Comedy|Drama",
+        "production_year" : 2014,
+        "budget" : 15915
+}
+> db.movies.find({"movie_name":"Don Quixote"},{"movie_name":1}).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55f"),
+        "movie_name" : "Don Quixote"
+}
+> db.movies.find({"movie_name:{$eq:"Don Quixote"}},{"movie_name":1,"production_year":1}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:34
+> db.movies.find({"movie_name:{$eq:"Don Quixote"}},[{"movie_name":1},{"production_year":1}]).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:34
+> db.movies.find({"movie_name:{$eq:"Don Quixote"}},{"movie_name":1,"production_year":1}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:34
+> db.movies.find({"movie_name:{$eq:"Don Quixote"}},{"movie_name":1,"production_year":1}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:34
+> db.movies.find({"movie_name:{$eq:"Don Quixote"}},{"movie_name":1}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:34
+> db.movies.find({"movie_name:{$eq:"Don Quixote"}}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:34
+> db.movies.find({"movie_name":{$eq:"Don Quixote"}},{"movie_name":1,"production_year":1}).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55f"),
+        "movie_name" : "Don Quixote",
+        "production_year" : 2014
+}
+> db.movies.find({"movie_name":{$ne:"Don Quixote"}},{"movie_name":1,"production_year":1}).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b550"),
+        "movie_name" : "Alice's Adventures in Wonderland",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b551"),
+        "movie_name" : "Delta of Venus",
+        "production_year" : 2015
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b552"),
+        "movie_name" : "Lost Weekend, The",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b553"),
+        "movie_name" : "These Three",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b554"),
+        "movie_name" : "Ladrón que roba a ladrón",
+        "production_year" : 2006
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b555"),
+        "movie_name" : "In A Day",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b556"),
+        "movie_name" : "Collision: Christopher Hitchens vs. Douglas Wilson",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b557"),
+        "movie_name" : "Deathstalker",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b558"),
+        "movie_name" : "The Broken Jug",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b559"),
+        "movie_name" : "Pigs with a P.38",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55a"),
+        "movie_name" : "Apartment Zero",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55b"),
+        "movie_name" : "Asylum",
+        "production_year" : 1994
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55c"),
+        "movie_name" : "Philadelphia Story, The",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55d"),
+        "movie_name" : "Abandoned, The",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55e"),
+        "movie_name" : "Open Water 2: Adrift",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b560"),
+        "movie_name" : "My Flesh My Blood (Moja krew)",
+        "production_year" : 1991
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b561"),
+        "movie_name" : "Magic Christmas Tree, The",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b562"),
+        "movie_name" : "Savages, The",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b563"),
+        "movie_name" : "Bee Movie",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b564"),
+        "movie_name" : "The Inspector",
+        "production_year" : 2019
+}
+Type "it" for more
+> db.movies.find({"budget":{$gte:15000},{"movie_name":1,"production_year":1}).pretty()
+...
+...
+>  db.movies.find({"budget":{$gte:15000}},{"movie_name":1,"production_year":1}).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b550"),
+        "movie_name" : "Alice's Adventures in Wonderland",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b552"),
+        "movie_name" : "Lost Weekend, The",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b553"),
+        "movie_name" : "These Three",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b554"),
+        "movie_name" : "Ladrón que roba a ladrón",
+        "production_year" : 2006
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b559"),
+        "movie_name" : "Pigs with a P.38",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55a"),
+        "movie_name" : "Apartment Zero",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55b"),
+        "movie_name" : "Asylum",
+        "production_year" : 1994
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55c"),
+        "movie_name" : "Philadelphia Story, The",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55d"),
+        "movie_name" : "Abandoned, The",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55f"),
+        "movie_name" : "Don Quixote",
+        "production_year" : 2014
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b560"),
+        "movie_name" : "My Flesh My Blood (Moja krew)",
+        "production_year" : 1991
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b563"),
+        "movie_name" : "Bee Movie",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b564"),
+        "movie_name" : "The Inspector",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b566"),
+        "movie_name" : "Samaritan, The",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b568"),
+        "movie_name" : "Letter, The",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b56b"),
+        "movie_name" : "In the Name of the King: A Dungeon Siege Tale",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b56c"),
+        "movie_name" : "Hellraiser",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b56f"),
+        "movie_name" : "Cyborg",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b570"),
+        "movie_name" : "Brewster McCloud",
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b574"),
+        "movie_name" : "Dog Days (Hundstage)",
+        "production_year" : 1991
+}
+Type "it" for more
+> db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b550"),
+        "movie_name" : "Alice's Adventures in Wonderland",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b551"),
+        "movie_name" : "Delta of Venus",
+        "production_year" : 2015
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b552"),
+        "movie_name" : "Lost Weekend, The",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b554"),
+        "movie_name" : "Ladrón que roba a ladrón",
+        "production_year" : 2006
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b555"),
+        "movie_name" : "In A Day",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b559"),
+        "movie_name" : "Pigs with a P.38",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55f"),
+        "movie_name" : "Don Quixote",
+        "production_year" : 2014
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b563"),
+        "movie_name" : "Bee Movie",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b564"),
+        "movie_name" : "The Inspector",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b565"),
+        "movie_name" : "Pirate, The",
+        "production_year" : 2012
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b567"),
+        "movie_name" : "Teaching Mrs. Tingle",
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b568"),
+        "movie_name" : "Letter, The",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b56b"),
+        "movie_name" : "In the Name of the King: A Dungeon Siege Tale",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b56c"),
+        "movie_name" : "Hellraiser",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b571"),
+        "movie_name" : "Chocolat",
+        "production_year" : 2008
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b575"),
+        "movie_name" : "Sorrow and the Pity, The (Le chagrin et la pitié)",
+        "production_year" : 2009
+}
+{ db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+{ db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "_id" : ObjectId("61388a95b3c63ea3fe26b550"),uction_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "movie_name" : "Alice's Adventures in Wonderland",n_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "production_year" : 2020":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+} db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+{ db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "_id" : ObjectId("61388a95b3c63ea3fe26b551"),uction_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "movie_name" : "Delta of Venus",0000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "production_year" : 2015":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+} db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+{ db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "_id" : ObjectId("61388a95b3c63ea3fe26b552"),uction_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "movie_name" : "Lost Weekend, The",0}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "production_year" : 2013":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+} db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+{ db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "_id" : ObjectId("61388a95b3c63ea3fe26b554"),uction_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "movie_name" : "Ladrón que roba a ladrón",roduction_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "production_year" : 2006":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+}ydb.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+{ db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+        "_id" : ObjectId("61388a95b3c63ea3fe26b555"),
+        "movie_name" : "In A Day",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b559"),
+        "movie_name" : "Pigs with a P.38",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55f"),
+        "movie_name" : "Don Quixote",
+        "production_year" : 2014
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b563"),
+        "movie_name" : "Bee Movie",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b564"),
+        "movie_name" : "The Inspector",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b565"),
+        "movie_name" : "Pirate, The",
+        "production_year" : 2012
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b567"),
+        "movie_name" : "Teaching Mrs. Tingle",
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b568"),
+        "movie_name" : "Letter, The",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b56b"),
+        "movie_name" : "In the Name of the King: A Dungeon Siege Tale",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b56c"),
+        "movie_name" : "Hellraiser",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b571"),
+        "movie_name" : "Chocolat",
+        "production_year" : 2008
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b575"),
+        "movie_name" : "Sorrow and the Pity, The (Le chagrin et la pitié)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b577"),
+        "movie_name" : "Halloweentown High",
+        "production_year" : 2008
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b57d"),
+        "movie_name" : "Advanced Style",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b57e"),
+        "movie_name" : "Kumaré",
+        "production_year" : 2015
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b580"),
+        "movie_name" : "Pretty Bird",
+        "production_year" : 2007
+}
+Type "it" for more
+> db.movies.find({$or:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b550"),
+        "movie_name" : "Alice's Adventures in Wonderland",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b551"),
+        "movie_name" : "Delta of Venus",
+        "production_year" : 2015
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b552"),
+        "movie_name" : "Lost Weekend, The",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b553"),
+        "movie_name" : "These Three",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b554"),
+        "movie_name" : "Ladrón que roba a ladrón",
+        "production_year" : 2006
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b555"),
+        "movie_name" : "In A Day",
+        "production_year" : 2016
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b556"),
+        "movie_name" : "Collision: Christopher Hitchens vs. Douglas Wilson",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b557"),
+        "movie_name" : "Deathstalker",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b558"),
+        "movie_name" : "The Broken Jug",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b559"),
+        "movie_name" : "Pigs with a P.38",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55a"),
+        "movie_name" : "Apartment Zero",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55b"),
+        "movie_name" : "Asylum",
+        "production_year" : 1994
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55c"),
+        "movie_name" : "Philadelphia Story, The",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55d"),
+        "movie_name" : "Abandoned, The",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55e"),
+        "movie_name" : "Open Water 2: Adrift",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b55f"),
+        "movie_name" : "Don Quixote",
+        "production_year" : 2014
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b560"),
+        "movie_name" : "My Flesh My Blood (Moja krew)",
+        "production_year" : 1991
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b561"),
+        "movie_name" : "Magic Christmas Tree, The",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b562"),
+        "movie_name" : "Savages, The",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b563"),
+        "movie_name" : "Bee Movie",
+        "production_year" : 2016
+}
+Type "it" for more
+> db.movies.find({$nor:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]},{"movie_name":1,"production_year":1}).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b583"),
+        "movie_name" : "Midnight in the Garden of Good and Evil",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b597"),
+        "movie_name" : "Mr. Klein (Monsieur Klein)",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b59f"),
+        "movie_name" : "Leatherface: Texas Chainsaw Massacre III",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5ac"),
+        "movie_name" : "Night Passage",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5b8"),
+        "movie_name" : "Big Shot: Confessions of a Campus Bookie",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5cf"),
+        "movie_name" : "Autumn Spring (Babí léto)",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5d8"),
+        "movie_name" : "Tesla: Master of Lightning",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5eb"),
+        "movie_name" : "Tony Takitani",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b659"),
+        "movie_name" : "Affair of the Heart, An",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b671"),
+        "movie_name" : "Mark of Zorro, The",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b67e"),
+        "movie_name" : "Suite Française",
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b6aa"),
+        "movie_name" : "Dirty Dozen, The: The Fatal Mission",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b6bb"),
+        "movie_name" : "Unrated II: Scary as Hell",
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b6d6"),
+        "movie_name" : "Kevin Smith: Burn in Hell",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b6f4"),
+        "movie_name" : "Sliver",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b760"),
+        "movie_name" : "Another You",
+        "production_year" : 1991
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b764"),
+        "movie_name" : "Tyler Perry's Meet the Browns",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b7d2"),
+        "movie_name" : "Triangle",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b7df"),
+        "movie_name" : "Quiet Man, The",
+        "production_year" : 1991
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b7e8"),
+        "movie_name" : "Murder on Monday",
+        "production_year" : 1999
+}
+Type "it" for more
+> db.movies.find({$and:[{"production_year":{$gte:2000}},{"production_year":{$lt:2010}}]},{"movie_name":1,"production_year":1}).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b554"),
+        "movie_name" : "Ladrón que roba a ladrón",
+        "production_year" : 2006
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b562"),
+        "movie_name" : "Savages, The",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b567"),
+        "movie_name" : "Teaching Mrs. Tingle",
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b56b"),
+        "movie_name" : "In the Name of the King: A Dungeon Siege Tale",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b56c"),
+        "movie_name" : "Hellraiser",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b56f"),
+        "movie_name" : "Cyborg",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b571"),
+        "movie_name" : "Chocolat",
+        "production_year" : 2008
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b575"),
+        "movie_name" : "Sorrow and the Pity, The (Le chagrin et la pitié)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b577"),
+        "movie_name" : "Halloweentown High",
+        "production_year" : 2008
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b57c"),
+        "movie_name" : "Boob, The",
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b57d"),
+        "movie_name" : "Advanced Style",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b580"),
+        "movie_name" : "Pretty Bird",
+        "production_year" : 2007
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b581"),
+        "movie_name" : "Sabotage",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b589"),
+        "movie_name" : "Where the Red Fern Grows",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b58d"),
+        "movie_name" : "Santa's Pocket Watch",
+        "production_year" : 2007
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b58e"),
+        "movie_name" : "Bête humaine, La",
+        "production_year" : 2007
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b58f"),
+        "movie_name" : "See You Tomorrow, Everyone",
+        "production_year" : 2007
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b590"),
+        "movie_name" : "Glimmer Man, The",
+        "production_year" : 2008
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b594"),
+        "movie_name" : "Village People",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b598"),
+        "movie_name" : "Death Sentence",
+        "production_year" : 2000
+}
+Type "it" for more
+> db.movies.find().sort({"production_year":-1},{"movie_name":1}).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b550"),
+        "id" : 1,
+        "movie_name" : "Alice's Adventures in Wonderland",
+        "movie_genre" : "Adventure|Children|Fantasy|Musical",
+        "production_year" : 2020,
+        "budget" : 18534
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b588"),
+        "id" : 57,
+        "movie_name" : "I, Robot",
+        "movie_genre" : "Action|Adventure|Sci-Fi|Thriller",
+        "production_year" : 2020,
+        "budget" : 17643
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b58c"),
+        "id" : 61,
+        "movie_name" : "Mom's Night Out",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 9541
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5a5"),
+        "id" : 86,
+        "movie_name" : "Night of the Living Dead",
+        "movie_genre" : "Horror",
+        "production_year" : 2020,
+        "budget" : 17527
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5ae"),
+        "id" : 95,
+        "movie_name" : "Pirates of the Caribbean: At World's End",
+        "movie_genre" : "Action|Adventure|Comedy|Fantasy",
+        "production_year" : 2020,
+        "budget" : 16925
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5b5"),
+        "id" : 102,
+        "movie_name" : "Ride the High Country",
+        "movie_genre" : "Adventure|Drama|Western",
+        "production_year" : 2020,
+        "budget" : 14932
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5c9"),
+        "id" : 122,
+        "movie_name" : "Henri-Georges Clouzot's Inferno (L'enfer d'Henri-Georges Clouzot)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 10404
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5e5"),
+        "id" : 150,
+        "movie_name" : "Fantastic Flesh: The Art of Make-Up EFX",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 15420
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b613"),
+        "id" : 196,
+        "movie_name" : "Crimewave",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2020,
+        "budget" : 10417
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b614"),
+        "id" : 197,
+        "movie_name" : "Celebrity",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 16541
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b62b"),
+        "id" : 220,
+        "movie_name" : "Natural, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 10750
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b663"),
+        "id" : 276,
+        "movie_name" : "Obvious Child",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 9261
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b669"),
+        "id" : 282,
+        "movie_name" : "Beautiful Boxer",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2020,
+        "budget" : 10032
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b678"),
+        "id" : 297,
+        "movie_name" : "Fury, The",
+        "movie_genre" : "Horror",
+        "production_year" : 2020,
+        "budget" : 14633
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b684"),
+        "id" : 309,
+        "movie_name" : "Guess Who's Coming to Dinner",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 18348
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b687"),
+        "id" : 312,
+        "movie_name" : "Hard-Boiled (Lat sau san taam)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 15831
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b688"),
+        "id" : 313,
+        "movie_name" : "My Foolish Heart",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 18802
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b69a"),
+        "id" : 331,
+        "movie_name" : "Last Minute, The",
+        "movie_genre" : "Drama|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 12583
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b6a0"),
+        "id" : 337,
+        "movie_name" : "The Siege of Firebase Gloria",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2020,
+        "budget" : 14969
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b6ce"),
+        "id" : 383,
+        "movie_name" : "Violette",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 13561
+}
+Type "it" for more
+> db.movies.find().sort({"production_year":-1},{"movie_name":1}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b684"),
+        "id" : 309,
+        "movie_name" : "Guess Who's Coming to Dinner",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 18348
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b678"),
+        "id" : 297,
+        "movie_name" : "Fury, The",
+        "movie_genre" : "Horror",
+        "production_year" : 2020,
+        "budget" : 14633
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b614"),
+        "id" : 197,
+        "movie_name" : "Celebrity",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 16541
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b613"),
+        "id" : 196,
+        "movie_name" : "Crimewave",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2020,
+        "budget" : 10417
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5e5"),
+        "id" : 150,
+        "movie_name" : "Fantastic Flesh: The Art of Make-Up EFX",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 15420
+}
+> db.movies.find().sort([{"production_year":-1},{"movie_name":1}]).skip(10).limit(5).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "Expected field sortto be of type object",
+        "code" : 14,
+        "codeName" : "TypeMismatch"
+}
+> db.movies.find().sort({"production_year":-1,"movie_name":1}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b736"),
+        "id" : 487,
+        "movie_name" : "Gleaming the Cube",
+        "movie_genre" : "Action|Drama|Mystery",
+        "production_year" : 2020,
+        "budget" : 18695
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b684"),
+        "id" : 309,
+        "movie_name" : "Guess Who's Coming to Dinner",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 18348
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b687"),
+        "id" : 312,
+        "movie_name" : "Hard-Boiled (Lat sau san taam)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 15831
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b5c9"),
+        "id" : 122,
+        "movie_name" : "Henri-Georges Clouzot's Inferno (L'enfer d'Henri-Georges Clouzot)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 10404
+}
+{
+        "_id" : ObjectId("61388a95b3c63ea3fe26b588"),
+        "id" : 57,
+        "movie_name" : "I, Robot",
+        "movie_genre" : "Action|Adventure|Sci-Fi|Thriller",
+        "production_year" : 2020,
+        "budget" : 17643
+}
+>
