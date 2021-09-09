@@ -1,0 +1,11 @@
+1- select movie_name, production_year from movies where movie_name="Don Quitto";
+2- select movie_name, production_year from movies where movie_name!="Don Quitto";
+3 - select movie_name, production_year from movies where budget>=15000;
+4 - select movie_name, production_year from movies where budget<=15000;
+5 - select movie_name, production_year from movies where budget>10000 and production_year>2000;
+6 - select movie_name, production_year from movies where budget>10000 or production_year>2000;
+7 - select movie_name, production_year from movies where not budget>10000 and not production_year>2000;
+8 - select movie_name, production_year from movies where not budget=10000 or not production_year=2000;
+9 - select movie_name, production_year from movies where production_year<2000 and production_year>2000;
+10- select movie_name, production_year from movies order by production_year desc, movie_name asc;
+11 - select movie_name, production_year from movies order by production_year desc, movie_name asc offset 10 limit 5;
