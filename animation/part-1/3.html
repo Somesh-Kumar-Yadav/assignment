@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Css Animation</title>
+		<style>
+			.spinner {
+				width: 40px;
+				height: 40px;
+				border: 8px solid grey;
+				border-radius: 50%;
+				border-top: 8px solid blue;
+				animation: spinner 2s linear 0s infinite;
+			}
+			.strip {
+				cursor: pointer;
+			}
+			.strip > div {
+				display: block;
+				width: 40px;
+				height: 5px;
+				margin: 3px;
+				background-color: black;
+				transform: all 0.5s linear;
+			}
+			.strip:active .strip1 {
+				transform: rotate(45deg) translateY(11px);
+			}
+			.strip:active .strip2 {
+				visibility: hidden;
+			}
+			.strip:active .strip3 {
+				transform: rotate(-45deg) translateY(-11px);
+			}
+
+			@keyframes spinner {
+				from {
+					transform: rotate(0);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="spinner"></div>
+		<br />
+		<div class="strip">
+			<div class="strip1"></div>
+			<div class="strip2"></div>
+			<div class="strip3"></div>
+		</div>
+	</body>
+</html>
