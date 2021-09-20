@@ -7,7 +7,6 @@ const router = express.Router();
 const upload = require("../utils/fileUpload");
 
 router.post("/", upload.array("image_urls", 5), async (req, res) => {
-	console.log("k");
 	const files = req.files.map((file) => file.path);
 	const gallery = await Gallery.create({
 		user: req.body.user,

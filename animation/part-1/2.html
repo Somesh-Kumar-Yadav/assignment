@@ -1,12 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Transition</title>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				width: 100vw;
+				justify-content: center;
+			}
+			.problem1 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: all 0.5s;
+			}
+			.problem1:hover {
+				transform: scale(1.2);
+			}
+			.problem1 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: all 0.5s;
+			}
+			.problem2 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				animation: fadeInAnimation ease 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			@keyframes fadeInAnimation {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			.problem3 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				animation: slideInAnimation ease 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			@keyframes slideInAnimation {
+				0% {
+					opacity: 0;
+					transform: translateX(0);
+				}
+				100% {
+					opacity: 1;
+					transform: translateX(100vw);
+				}
+			}
+			.problem4 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: all 1s;
+			}
+			.problem4:hover {
+				transform: rotate(360deg);
+			}
+			.problem5 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: all 1s;
+			}
+			.problem5:hover {
+				border-radius: 50%;
+			}
+			.prob1 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				animation: inAnimation ease 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			.prob2 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				animation: inAnimation ease-in 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			.prob3 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				animation: inAnimation ease-out 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			.prob4 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				animation: inAnimation ease-in-out 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			.prob5 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				animation: inAnimation linear 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			.prob6 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				animation: inAnimation cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			.prob7 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				animation: inAnimation cubic-bezier(0.215, 0.61, 0.355, 1) 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			@keyframes inAnimation {
+				0% {
+					transform: translateX(0);
+				}
+				100% {
+					transform: translateX(100vw);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hover</h1>
+		<div class="problem1"></div>
+		<hr />
+		<h1>On load</h1>
+		<div class="problem2"></div>
+		<hr />
+		<h1>Slide In</h1>
+		<div class="problem3"></div>
+		<hr />
+		<h1>Rotate</h1>
+		<div class="problem4"></div>
+		<hr />
+		<h1>Border Radius</h1>
+		<div class="problem5"></div>
+		<hr />
+		<h1>translate on load</h1>
+		<div class="prob1"></div>
+		<div class="prob2"></div>
+		<div class="prob3"></div>
+		<div class="prob4"></div>
+		<div class="prob5"></div>
+		<div class="prob6"></div>
+		<div class="prob7"></div>
+		<hr />
+	</body>
 </html>
