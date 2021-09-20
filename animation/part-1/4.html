@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Animation 2</title>
+		<style>
+			body {
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			body div {
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.sun {
+				background: yellow;
+				height: 50px;
+				width: 50px;
+			}
+			.mercury {
+				height: 100px;
+				width: 100px;
+				position: relative;
+				border: 1px solid grey;
+				animation: rotate 3s linear infinite;
+			}
+			.mercury::after {
+				content: "";
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: red;
+				top: 95px;
+			}
+			.venus {
+				height: 170px;
+				width: 170px;
+				position: relative;
+				border: 1px solid grey;
+				animation: rotate 7s linear infinite;
+			}
+			.venus::after {
+				content: "";
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: rgb(168, 219, 27);
+				top: 160px;
+			}
+			.earth {
+				height: 250px;
+				width: 250px;
+				position: relative;
+				border: 1px solid grey;
+				animation: rotate 10s linear infinite;
+			}
+			.earth::after {
+				content: "";
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: rgb(70, 190, 96);
+				top: 235px;
+			}
+			.mars {
+				height: 450px;
+				width: 450px;
+				position: relative;
+				border: 1px solid grey;
+				animation: rotate 20s linear infinite;
+			}
+			.mars::after {
+				content: "";
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: rgb(224, 6, 6);
+				top: 440px;
+			}
+			.jupiter {
+				height: 600px;
+				width: 600px;
+				position: relative;
+				border: 1px solid grey;
+				animation: rotate 30s linear infinite;
+			}
+			.jupiter::after {
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: brown;
+				top: 575px;
+			}
+			.saturn,
+			.uranus,
+			.neptune {
+				border: 1px solid grey;
+				position: relative;
+			}
+			.saturn {
+				height: 800px;
+				width: 800px;
+				animation: rotate 30s linear infinite;
+			}
+			.uranus {
+				height: 900px;
+				width: 900px;
+				animation: rotate 30s linear infinite;
+			}
+			.neptune {
+				height: 1000px;
+				width: 1000px;
+				animation: rotate 30s linear infinite;
+			}
+			.saturn::after,
+			.uranus::after,
+			.neptune::after {
+				content: "";
+				position: absolute;
+				border-radius: 50%;
+			}
+			.saturn::after {
+				width: 40px;
+				height: 40px;
+				background-color: coral;
+				top: 780px;
+			}
+			.uranus::after {
+				width: 30px;
+				height: 30px;
+				background-color: blueviolet;
+				top: 885px;
+			}
+			.neptune::after {
+				width: 20px;
+				height: 20px;
+				background-color: rgb(73, 52, 45);
+				top: 990px;
+			}
+
+			@keyframes rotate {
+				from {
+					transform: rotate(0);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="neptune">
+			<div class="uranus">
+				<div class="saturn">
+					<div class="jupiter">
+						<div class="mars">
+							<div class="earth">
+								<div class="venus">
+									<div class="mercury">
+										<div class="sun"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
