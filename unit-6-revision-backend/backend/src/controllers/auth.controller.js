@@ -35,7 +35,6 @@ const register = async (req, res) => {
 
 		//create a token for that user
 		const token = newToken(user);
-		console.log(token);
 		return res.status(201).json({ token });
 	} catch (e) {
 		return res

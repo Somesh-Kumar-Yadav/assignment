@@ -33,7 +33,6 @@ router.get("/", async (req, res) => {
 	const user = verifyToken(req.body.token);
 	if (user.user.type === "basic") {
 		data = series.filter((a) => !a.premium);
-		data = data.slice(0, 7);
 		return res.status(200).send({ total: data.length, data: data });
 	} else if (user.user.type === "premium") {
 		data = series;
